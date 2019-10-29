@@ -7,7 +7,7 @@ plugins {
 
 
 version "0.1"
-group "com.github.jgluna"
+group "com.github.jgluna.micronaut.server"
 
 repositories {
     mavenCentral()
@@ -20,6 +20,10 @@ configurations {
 }
 
 dependencies {
+    compile "io.micronaut.configuration:micronaut-hibernate-jpa"
+    compile "io.micronaut.configuration:micronaut-jdbc-hikari"
+    runtime "com.h2database:h2"
+    compile "io.micronaut.configuration:micronaut-hibernate-validator"
     annotationProcessor platform("io.micronaut:micronaut-bom:$micronautVersion")
     annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor "io.micronaut:micronaut-validation"
@@ -41,7 +45,7 @@ dependencies {
 
 test.classpath += configurations.developmentOnly
 
-mainClassName = "com.github.jgluna.Application"
+mainClassName = "com.github.jgluna.micronaut.server.Application"
 // use JUnit 5 platform
 test {
     useJUnitPlatform()
