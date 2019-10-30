@@ -1,5 +1,5 @@
 profile: service
-defaultPackage: com.github.jgluna
+defaultPackage: com.github.jgluna.micronaut.server
 ---
 testFramework: junit
 sourceLanguage: java

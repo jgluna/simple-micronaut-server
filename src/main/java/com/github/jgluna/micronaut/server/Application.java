@@ -1,4 +1,4 @@
-package com.github.jgluna;
+package com.github.jgluna.micronaut.server;
 
 import io.micronaut.runtime.Micronaut;
 
